@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {
+  margin: 0; 
+  padding: 0;
+  font-family: Verdana, sans-serif;
+
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.active {
+  background-color: #ee6060;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden;
+  background-color: #FC6E5B;
+  width: 100%; 
+  border: none; 
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #FC8A5B;
+}
+
+
+
+.produtos{
+  margin: 15px;
+  cursor: pointer;
+  border-width: 15px; 
+  border-style: solid;
+  border-color:  white;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.produtos img{
+  width: 250px;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.produtos:hover{
+      transition:.5s;
+      transform:scale(1.1);
+      cursor:pointer;
+      z-index:2;
+}
+
+.produtos p{
+ background-color: white;
+ color: #FC8A5B;
+ padding: 10px 15px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ text-align: center;
+ width: 100%;
+ margin: 0;
+}
+
+#produtos{
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#produtos a {
+  text-decoration: none;
+  color: inherit; 
+}
+.cardapio {
+  background-color: #FC6E5B;
+}
+
+#titulo {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  color: white;
+  margin-top: 10px; 
+  font-size: 40px;
+  padding-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #ee6060;
+  width: 100%;
+}
+
+#texto{
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">Novidades</a></li>
+  <li><a href="#about">Sobre</a></li>
+  <li><a href="#products">Produtos</a></li>
+  <li><a href="#contact">Contato</a></li>
+</ul>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="c:\Users\Rebeca\Downloads\trabalho\Doce (2560 x 423 px).png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="c:\Users\Rebeca\Downloads\trabalho\sbolo.png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="c:\Users\Rebeca\Downloads\trabalho\Petisco (2560 x 423 px).png" style="width:100%">
+  <div class="text"></div>
+</div>
+
+</div>
+
+
+
+<section class="cardapio">
+
+  <p id="titulo">Nossos Produtos</p>
+
+  <p id="texto">Entre em contato e faça seu pedido!</p>
+
+<section id="produtos">
+  <a href="https://wa.me/5534996551942" target="_blank">
+    <section class="produtos">
+       <img src="c:\Users\Rebeca\Downloads\trabalho\chocolate.png">
+       <p>Caseiros</p>
+    </section>
+  </a>
+  <a href="https://wa.me/5534996551942" target="_blank">
+    <section class="produtos">
+        <img src="c:\Users\Rebeca\Downloads\trabalho\redvelvet.png">
+        <p>Bolos Gourmet</p>
+    </section>
+  </a>
+  <a href="https://wa.me/5534996551942" target="_blank">
+    <section class="produtos">
+      <img src="c:\Users\Rebeca\Downloads\trabalho\bento.png">
+      <p>Bento Cakes</p>
+    </section>
+  </a>
+  <a href="https://wa.me/5534996551942" target="_blank">
+    <section class="produtos">
+    <img src="c:\Users\Rebeca\Downloads\trabalho\kit.png">
+    <p>Kit Festas</p>
+    </section>
+  </a>
+
+
+</section>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 3000); 
+}
+</script>
+
+</body>
+</html>
