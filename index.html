@@ -7,7 +7,7 @@
 * {box-sizing: border-box;}
 body {
   margin: 0; 
-  padding: 0;
+  padding-top: 100px;
   font-family: Verdana, sans-serif;
 
 }
@@ -295,12 +295,18 @@ li a:hover {
   width: 150px; 
   height: 100px;
 }
+#navigator{
+    z-index: 999;
+    height:100px;
+    position:fixed; top:0;
+
+}
 
 </style>
 </head>
 <body>
 
-<ul>
+<ul id="navigator">
   
   
   <img src="imgs/logoOriginal.png">
@@ -360,7 +366,7 @@ li a:hover {
   </div>
 </section>
 
-<section id="products" class="cardapio">
+<section id="products"class="cardapio">
 
   <p id="titulo">Nossos Produtos</p>
 
